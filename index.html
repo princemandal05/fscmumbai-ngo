@@ -2,24 +2,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FSC Mumbai NGO</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vibrant NGO</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Poppins',sans-serif; color:#333; }
+  header { background: linear-gradient(135deg,#FF6B6B,#FFC300); color:white; text-align:center; padding:4rem 1rem; }
+  header h1 { font-weight:800; font-size:2.75rem; margin-bottom:0.5rem; }
+  header p { font-weight:300; font-size:1.25rem; }
+  .btn { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; font-weight:600; color:white; background:#3366FF; border:none; border-radius:4px; text-decoration:none; transition:background .3s; }
+  .btn:hover { background:#254eda; }
+  section { padding:4rem 1rem; }
+  .container { max-width:1000px; margin:auto; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:1.5rem; }
+  .card { background:white; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05); padding:1.5rem; text-align:center; }
+  .card h3 { margin-bottom:1rem; color:#FF6B6B; }
+  form.cards input, form.cards textarea {
+    width: 100%; margin-bottom: 1rem; padding: 0.75rem;
+    border: 1px solid #ccc; border-radius: 4px;
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <h1>FSC Mumbai</h1>
-    <a href="admin.html">Admin Dashboard</a>
-  </nav>
-  <section id="hero">
-    <h2>Empowering Families Since 1955</h2>
-    <p>Support. Strength. Service.</p>
-    <a href="volunteer.html">Become a Volunteer</a>
+  <header>
+    <h1>Empower & Inspire</h1>
+    <p>Creating brighter futures through compassion and action</p>
+    <a href="#volunteer" class="btn">Join as Volunteer</a>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We empower underprivileged communities with education, resources, and a voice to be heard.</p>
+    </div>
   </section>
-  <footer>
-    <p>Contact: info@demo-ngo.org | WhatsApp: +91 98765 43210</p>
-    <p>Follow us: Facebook | Instagram | Twitter</p>
-  </footer>
+
+  <section id="programs">
+    <div class="container">
+      <h2>Our Programs</h2>
+      <div class="cards">
+        <div class="card"><h3>Education</h3><p>Providing scholarships & mentorship</p></div>
+        <div class="card"><h3>Health & Hygiene</h3><p>Community health camps & awareness</p></div>
+        <div class="card"><h3>Environment</h3><p>Plantation drives & clean-up events</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="volunteer">
+    <div class="container">
+      <h2>Sign Up to Volunteer</h2>
+      <form class="cards">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Why you’d like to volunteer?" rows="4"></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
